@@ -1,0 +1,29 @@
+.amd-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+}
+.amd-sidenav {
+    min-width: 150px;
+}
+.main-container {
+    margin-top: 65px;
+    width: 100%;
+}
+mat-drawer {
+    box-shadow: 0.3 0.3 0.3 0.3 !important;
+}
+
+mat-list-item:hover {
+    cursor: pointer;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.sidenav-icon {
+    margin-right: 10px;
+}
