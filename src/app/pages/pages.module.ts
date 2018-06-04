@@ -11,6 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 
 const PAGES_COMPONENTS = [
   PagesComponent
@@ -27,7 +28,8 @@ const PAGES_COMPONENTS = [
     MatGridListModule,
     MatButtonModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,

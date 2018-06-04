@@ -10,6 +10,20 @@ export class PagesComponent implements OnInit {
   public menus = [
     {
       "title": "Title 1",
+      "icon": "music_note",
+      "menuItem": [
+        {
+          "title": "Sub Menu 1",
+          "icon": "menu"
+        },
+        {
+          "title": "Sub Menu 2",
+          "icon": "menu"
+        }
+      ]
+    },
+    {
+      "title": "Title 2",
       "icon": "theaters",
       "menuItem": [
         {
@@ -23,7 +37,7 @@ export class PagesComponent implements OnInit {
       ]
     },
     {
-      "title": "Title 2",
+      "title": "Title 3",
       "icon": "music_note",
       "menuItem": [
         {
@@ -37,7 +51,7 @@ export class PagesComponent implements OnInit {
       ]
     }
   ];
-
+  showFiller = false;
   constructor() { }
 
   ngOnInit() {
