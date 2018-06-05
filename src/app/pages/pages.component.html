@@ -1,11 +1,11 @@
-<mat-toolbar class="main-toolbar mat-elevation-z3">
+<mat-toolbar class="main-toolbar mat-elevation-z3" color="primary">
   <button mat-icon-button (click)="drawer.toggle()">
     <i class="material-icons">menu</i>
   </button>
-  <span>My Application</span>
+  <img src="assets/img/logo.png" class="logo"/><span>My Application</span>
 
-  <span class="fill-remaining-space"></span>
-  <img src="assets/img/logo.png" class="logo"/>
+  <!-- <span class="fill-remaining-space"></span> -->
+  
 
   <span class="fill-remaining-space"></span>
 
@@ -18,9 +18,9 @@
   
 </mat-toolbar>
 <mat-drawer-container class="main-container" autosize fullscreen>
-  <mat-drawer #drawer mode="side" opened="true">
-      <mat-accordion>
 
+  <mat-drawer #drawer mode="side" opened="true" color="primary">
+      <mat-accordion>
           <mat-expansion-panel *ngFor="let menu of menus">
             <mat-expansion-panel-header>
               <mat-panel-title><i class="material-icons sidenav-icon">{{menu.icon}}</i>{{menu.title}}</mat-panel-title>
@@ -29,62 +29,11 @@
               <mat-list-item *ngFor="let subMenu of menu.menuItem"> <i class="material-icons sidenav-icon">{{subMenu.icon}}</i>{{subMenu.title}}</mat-list-item>
             </mat-list>
           </mat-expansion-panel>
-          
         </mat-accordion>
-
-        <mat-list>
-            <mat-list-item [matMenuTriggerFor]="animals"><i class="material-icons sidenav-icon">menu</i> Tes bla bla bla bla bla bla</mat-list-item>
-            <mat-menu #animals="matMenu" xPosition="before" menuOpen="true">
-                <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates 1</button>
-                <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
-              </mat-menu>
-          
-              <mat-menu #vertebrates="matMenu">
-                <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-                <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-                <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-                <button mat-menu-item>Birds</button>
-                <button mat-menu-item>Mammals</button>
-              </mat-menu>
-          
-              <mat-menu #invertebrates="matMenu">
-                <button mat-menu-item>Insects</button>
-                <button mat-menu-item>Molluscs</button>
-                <button mat-menu-item>Crustaceans</button>
-                <button mat-menu-item>Corals</button>
-                <button mat-menu-item>Arachnids</button>
-                <button mat-menu-item>Velvet worms</button>
-                <button mat-menu-item>Horseshoe crabs</button>
-              </mat-menu>
-          
-              <mat-menu #fish="matMenu">
-                <button mat-menu-item>Baikal oilfish</button>
-                <button mat-menu-item>Bala shark</button>
-                <button mat-menu-item>Ballan wrasse</button>
-                <button mat-menu-item>Bamboo shark</button>
-                <button mat-menu-item>Banded killifish</button>
-              </mat-menu>
-          
-              <mat-menu #amphibians="matMenu">
-                <button mat-menu-item>Sonoran desert toad</button>
-                <button mat-menu-item>Western toad</button>
-                <button mat-menu-item>Arroyo toad</button>
-                <button mat-menu-item>Yosemite toad</button>
-              </mat-menu>
-          
-              <mat-menu #reptiles="matMenu">
-                <button mat-menu-item>Banded Day Gecko</button>
-                <button mat-menu-item>Banded Gila Monster</button>
-                <button mat-menu-item>Black Tree Monitor</button>
-                <button mat-menu-item>Blue Spiny Lizard</button>
-                <button mat-menu-item disabled>Velociraptor</button>
-              </mat-menu>
-          </mat-list>
-
-    
-
   </mat-drawer>
+
   <div class="main-sidenav-content">
       <router-outlet></router-outlet>
   </div>
+
 </mat-drawer-container>

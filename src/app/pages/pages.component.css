@@ -1,16 +1,18 @@
 .logo {
     height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .main-toolbar {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    height: 50px;
+    height: 55px;
     z-index: 3;
 }
 mat-drawer {
-    min-width: 230px;
+    min-width: 300px;
     box-shadow: 0 0 0 0 !important;
     border-right: 1px solid #f0f0f0;
 }
@@ -19,7 +21,7 @@ mat-drawer {
     height: 100%;
 }
 .main-container {
-    margin-top: 50px;
+    margin-top: 55px;
     width: 100%;
 }
 mat-list-item:hover, .menu-icon, .avatar {
@@ -27,6 +29,7 @@ mat-list-item:hover, .menu-icon, .avatar {
 }
 .sidenav-icon {
     margin-right: 10px;
+    font-size: 15px;
 }
 .fill-remaining-space {
     flex: 1 1 auto;
