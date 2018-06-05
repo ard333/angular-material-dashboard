@@ -4,6 +4,7 @@ import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  { path: 'pages', redirectTo: 'pages/dashboard' },
   {
     path: 'pages',
     loadChildren: './pages/pages.module#PagesModule',
@@ -13,6 +14,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   { path: '**', redirectTo: '' },
+  
 ];
 
 const config: ExtraOptions = {

@@ -17,22 +17,20 @@
 </mat-toolbar>
 <mat-drawer-container class="main-container" autosize fullscreen>
 
-  <mat-drawer #drawer mode="side" opened="true" color="primary">
+  <mat-drawer #drawer mode="side" opened="true">
     <mat-accordion>
       <mat-expansion-panel *ngFor="let menu of menus">
         <mat-expansion-panel-header>
-          <mat-panel-title>
-            <i class="material-icons sidenav-icon">{{menu.icon}}</i>{{menu.title}}</mat-panel-title>
+          <mat-panel-title><i class="material-icons sidenav-icon">{{menu.icon}}</i>{{menu.title}}</mat-panel-title>
         </mat-expansion-panel-header>
         <mat-list>
-          <mat-list-item *ngFor="let subMenu of menu.menuItem">
-            <i class="material-icons sidenav-icon">{{subMenu.icon}}</i>{{subMenu.title}}</mat-list-item>
+          <mat-list-item *ngFor="let subMenu of menu.menuItem"><i class="material-icons sidenav-icon">{{subMenu.icon}}</i>{{subMenu.title}}</mat-list-item>
         </mat-list>
       </mat-expansion-panel>
     </mat-accordion>
   </mat-drawer>
 
-  <div class="main-sidenav-content">
+  <div>
     <router-outlet></router-outlet>
   </div>
 

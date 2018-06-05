@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<div>
+    <div [hidden]="!loading">
+        <div class="loading"><img src="assets/img/loading.gif"/></div>
+    </div>
+    <div [hidden]="loading">
+        <router-outlet></router-outlet>
+    </div>
+</div>

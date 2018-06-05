@@ -12,7 +12,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -27,7 +26,6 @@ import { MatCardModule } from '@angular/material/card';
     MatExpansionModule,
     MatListModule,
     MatMenuModule,
-    MatCardModule,
   ],
   declarations: [
     PagesComponent,

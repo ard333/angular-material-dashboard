@@ -4,28 +4,30 @@
     background-color: #333;
     color: #f0f0f0;
 }
-
 .secondary {
     background-color: #666;
     color: #f0f0f0;
 }
-
 .tertiary {
     background-color: #999;
     color: #f0f0f0;
 }
-
 .success {
     background-color: #7cc982;
     color: #f0f0f0;
 }
-
 .warning {
     background-color: #d4db78;
     color: #f0f0f0;
 }
-
 .error {
     background-color: #d86868;
     color: #f0f0f0;
+}
+.main-card {
+    margin: 25px 25px 25px 25px;
+}
+.loading {
+    width:100%;
+    text-align:center;
 }
