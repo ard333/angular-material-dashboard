@@ -1,39 +1,39 @@
-<mat-toolbar class="main-toolbar mat-elevation-z3" color="primary">
+<mat-toolbar class="main-toolbar mat-elevation-z3 primary">
   <button mat-icon-button (click)="drawer.toggle()">
     <i class="material-icons">menu</i>
   </button>
-  <img src="assets/img/logo.png" class="logo"/><span>My Application</span>
-
-  <!-- <span class="fill-remaining-space"></span> -->
-  
+  <img src="assets/img/logo.png" class="logo" />
+  <span>My Application</span>
 
   <span class="fill-remaining-space"></span>
 
-  <img src="assets/img/profile.jpeg" class="avatar" [matMenuTriggerFor]="menu"/>
+  <img src="assets/img/profile.jpeg" class="avatar" [matMenuTriggerFor]="menu" />
   <i class="material-icons menu-icon" [matMenuTriggerFor]="menu">more_vert</i>
   <mat-menu #menu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item class="profile-menu">Edit Profile</button>
     <button mat-menu-item class="profile-menu">Change Password</button>
   </mat-menu>
-  
+
 </mat-toolbar>
 <mat-drawer-container class="main-container" autosize fullscreen>
 
   <mat-drawer #drawer mode="side" opened="true" color="primary">
-      <mat-accordion>
-          <mat-expansion-panel *ngFor="let menu of menus">
-            <mat-expansion-panel-header>
-              <mat-panel-title><i class="material-icons sidenav-icon">{{menu.icon}}</i>{{menu.title}}</mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-list>
-              <mat-list-item *ngFor="let subMenu of menu.menuItem"> <i class="material-icons sidenav-icon">{{subMenu.icon}}</i>{{subMenu.title}}</mat-list-item>
-            </mat-list>
-          </mat-expansion-panel>
-        </mat-accordion>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let menu of menus">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons sidenav-icon">{{menu.icon}}</i>{{menu.title}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item *ngFor="let subMenu of menu.menuItem">
+            <i class="material-icons sidenav-icon">{{subMenu.icon}}</i>{{subMenu.title}}</mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-drawer>
 
   <div class="main-sidenav-content">
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>

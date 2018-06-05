@@ -12,10 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-
-const PAGES_COMPONENTS = [
-  PagesComponent
-];
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -29,10 +26,11 @@ const PAGES_COMPONENTS = [
     MatButtonModule,
     MatExpansionModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
   ],
   declarations: [
-    ...PAGES_COMPONENTS,
+    PagesComponent,
   ]
 })
 export class PagesModule { }
