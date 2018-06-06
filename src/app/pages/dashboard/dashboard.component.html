@@ -1,23 +1,60 @@
-<mat-card class="main-card">
-    <mat-card-header>
-        <mat-card-title>Dashboard</mat-card-title>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-        <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
-            very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-        </p>
+<div fxLayout="row" fxLayout.lt-md="column">
+  <div fxLayout="column" fxFlex="33" fxLayout.lt-md="row" fxFlex.lt-md="100">
+    <mat-card class="main-card additional-info">
+      <div>
+        <span>100%</span>
+        <span>Additional Info 1</span>
+      </div>
+      <div>
+        <i class="material-icons">done</i>
+      </div>
+    </mat-card>
+  </div>
+  <div fxLayout="column" fxFlex="33" fxLayout.lt-md="row" fxFlex.lt-md="100">
+    <mat-card class="main-card additional-info">
+      <div>
+        <span>33</span>
+        <span>Additional Info 2</span>
+      </div>
+      <div>
+        <i class="material-icons">thumb_up</i>
+      </div>
+    </mat-card>
+  </div>
+  <div fxLayout="column" fxFlex="34" fxLayout.lt-md="row" fxFlex.lt-md="100">
+    <mat-card class="main-card additional-info">
+      <div>
+        <span>66x</span>
+        <span>Additional Info 3</span>
+      </div>
+      <div>
+        <i class="material-icons">attach_money</i>
+      </div>
+    </mat-card>
+  </div>
+</div>
 
-        <mat-card class="main-card">
-            <mat-card-header>
-                <mat-card-title>Chart</mat-card-title>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-                <canvas #myCanvas></canvas>
-            </mat-card-content>
-        </mat-card>
-        
-    </mat-card-content>
-</mat-card>
+<div fxLayout="row" fxLayout.lt-md="column">
+  <div fxLayout="column" fxFlex="60" fxLayout.lt-md="row" fxFlex.lt-md="100">
+    <mat-card class="main-card">
+      <mat-card-header>
+        <mat-card-title>Example Chart 1</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <canvas #barChart></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxLayout="column" fxFlex="40" fxLayout.lt-md="row" fxFlex.lt-md="100">
+    <mat-card class="main-card">
+      <mat-card-header>
+        <mat-card-title>Example Chart 2</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <canvas #pieChart></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

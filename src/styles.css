@@ -1,31 +1,32 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-.primary {
+.primary-color {
     background-color: #333;
     color: #f0f0f0;
 }
-.secondary {
-    background-color: #666;
-    color: #f0f0f0;
-}
-.tertiary {
-    background-color: #999;
-    color: #f0f0f0;
-}
-.success {
+.secondary-color {
     background-color: #7cc982;
     color: #f0f0f0;
 }
-.warning {
+.tertiary-color {
+    background-color: #666;
+    color: #f0f0f0;
+}
+.success-color {
+    background-color: #7cc982;
+    color: #f0f0f0;
+}
+.warning-color {
     background-color: #d4db78;
     color: #f0f0f0;
 }
-.error {
+.error-color {
     background-color: #d86868;
     color: #f0f0f0;
 }
 .main-card {
-    margin: 25px 25px 25px 25px;
+    margin: 15px 15px 15px 15px;
+    height: 100%;
 }
 .main-card mat-card-content {
     margin-top: 25px;
@@ -33,4 +34,30 @@
 .loading {
     width:100%;
     text-align:center;
+}
+
+.additional-info div{
+    display:inline-block;
+    height:100%;
+    text-align: right;
+}
+.additional-info div:nth-child(even){
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 30%;
+    text-align: center;
+}
+.additional-info div:nth-child(odd){
+    width: 65%;
+}
+.additional-info div span{
+    display:inline-block;
+    width: 100%;
+    padding: 5px;
+}
+.additional-info div span:nth-child(odd){
+    font-size: 20px;
+}
+.additional-info div span:nth-child(even){
+    color: #666
 }

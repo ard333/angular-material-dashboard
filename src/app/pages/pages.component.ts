@@ -7,54 +7,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  public menus = [
-    {
-      "title": "Title 1",
-      "icon": "music_note",
-      "menuItem": [
-        {
-          "title": "Sub Menu 1",
-          "icon": "menu"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "menu"
-        }
-      ]
-    },
-    {
-      "title": "Title 2",
-      "icon": "theaters",
-      "menuItem": [
-        {
-          "title": "Sub Menu 1",
-          "icon": "thumb_up"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "thumb_down"
-        }
-      ]
-    },
-    {
-      "title": "Title 3",
-      "icon": "music_note",
-      "menuItem": [
-        {
-          "title": "Sub Menu 1",
-          "icon": "menu"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "menu"
-        }
-      ]
-    }
-  ];
-  showFiller = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  public menus = [
+    {
+      "title": "Menu 1",
+      "icon": "autorenew",
+      "menuItem": [
+        {
+          "title": "Sub Menu 1",
+          "icon": "build"
+        },
+        {
+          "title": "Sub Menu 2",
+          "icon": "query_builder"
+        }
+      ]
+    },
+    {
+      "title": "Menu 2",
+      "icon": "trending_flat",
+      "menuItem": [
+        {
+          "title": "Sub Menu 1",
+          "icon": "trending_down"
+        },
+        {
+          "title": "Sub Menu 2",
+          "icon": "trending_up"
+        }
+      ]
+    },
+    {
+      "title": "Menu 3",
+      "icon": "settings",
+      "menuItem": [
+        {
+          "title": "Sub Menu 1",
+          "icon": "equalizer"
+        },
+        {
+          "title": "Sub Menu 2",
+          "icon": "volume_up"
+        }
+      ]
+    }
+  ];
 }

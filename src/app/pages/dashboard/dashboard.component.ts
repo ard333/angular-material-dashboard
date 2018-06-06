@@ -8,50 +8,52 @@ import * as Chart from 'chart.js'
 })
 export class DashboardComponent implements AfterViewInit {
 
-  
-  @ViewChild('myCanvas') myCanvas: ElementRef;
-  public context: CanvasRenderingContext2D;
+  @ViewChild('barChart') barChart: ElementRef;
+  public contextBar: CanvasRenderingContext2D;
+
+  @ViewChild('pieChart') pieChart: ElementRef;
+  public contextPie: CanvasRenderingContext2D;
 
   constructor() { }
 
   ngAfterViewInit() {
-    this.context = (<HTMLCanvasElement>this.myCanvas.nativeElement).getContext('2d');
-    new Chart(this.context, {
-      type: 'bar',
+    this.contextBar = (<HTMLCanvasElement>this.barChart.nativeElement).getContext('2d');
+    new Chart(this.contextBar, {
+      type: 'line',
       data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255,99,132,1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true
-                  }
-              }]
+        datasets: [
+          {
+            label: 'Label One',
+            data: [{ x: 20, y: 10 }, { x: 10, y: 15 }, { x: 30, y: 20 }],
+            backgroundColor: ['rgba(75, 192, 192, 0.7)']
+          },
+          {
+            label: 'Label Two',
+            data: [{ x: 10, y: 30 }, { x: 15, y: 10 }, { x: 20, y: 20 }],
+            backgroundColor: ['rgba(255, 159, 64, 0.7)']
           }
+        ]
       }
-  })
+    })
+
+    this.contextPie = (<HTMLCanvasElement>this.pieChart.nativeElement).getContext('2d');
+    new Chart(this.contextPie, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [10, 20, 30],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)']
+        }],
+        labels: [
+          'Label One',
+          'Label Two',
+          'Label Three'
+        ]
+      }
+    })
   }
 
 }
