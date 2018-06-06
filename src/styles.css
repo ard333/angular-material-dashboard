@@ -27,6 +27,9 @@
 .main-card {
     margin: 25px 25px 25px 25px;
 }
+.main-card mat-card-content {
+    margin-top: 25px;
+}
 .loading {
     width:100%;
     text-align:center;
