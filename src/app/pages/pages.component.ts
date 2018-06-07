@@ -14,46 +14,38 @@ export class PagesComponent implements OnInit {
 
   public menus = [
     {
-      "title": "Menu 1",
-      "icon": "autorenew",
+      "title": "Dashboard",
+      "icon": "dashboard",
+      "path": "/pages/dashboard",
+      "menuItem": []
+    },
+    {
+      "title": "Multi Level Menu",
+      "icon": "wrap_text",
       "menuItem": [
         {
-          "title": "Sub Menu 1",
-          "icon": "build"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "query_builder"
+          "title": "Some Example",
+          "icon": "build",
+          "path": "/pages/example",
         }
       ]
     },
     {
-      "title": "Menu 2",
-      "icon": "trending_flat",
+      "title": "Dashboard",
+      "icon": "dashboard",
+      "path": "/pages/dashboard",
+      "menuItem": []
+    },
+    {
+      "title": "Multi Level Menu",
+      "icon": "wrap_text",
       "menuItem": [
         {
-          "title": "Sub Menu 1",
-          "icon": "trending_down"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "trending_up"
+          "title": "Some Example",
+          "icon": "build",
+          "path": "/pages/example",
         }
       ]
     },
-    {
-      "title": "Menu 3",
-      "icon": "settings",
-      "menuItem": [
-        {
-          "title": "Sub Menu 1",
-          "icon": "equalizer"
-        },
-        {
-          "title": "Sub Menu 2",
-          "icon": "volume_up"
-        }
-      ]
-    }
   ];
 }

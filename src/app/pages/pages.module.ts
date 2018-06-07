@@ -4,6 +4,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from "./dashboard/dashboard.module";
+import { ExampleModule } from "./example/example.module";
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,7 +18,9 @@ import { MatMenuModule } from '@angular/material/menu';
   imports: [
     CommonModule,
     PagesRoutingModule,
+    
     DashboardModule,
+    ExampleModule,
 
     MatToolbarModule,
     MatSidenavModule,

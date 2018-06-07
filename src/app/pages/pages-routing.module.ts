@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { ExampleComponent } from "./example/example.component";
 import { PagesComponent } from "./pages.component";
 
 const routes: Routes = [{
@@ -10,21 +11,10 @@ const routes: Routes = [{
   children: [{
     path: 'dashboard',
     component: DashboardComponent,
-  },
-  /* {
-    path: 'customer',
-    loadChildren: './customer/customer.module#CustomerModule',
-  }, {
-    path: 'supplier',
-    loadChildren: './supplier/supplier.module#SupplierModule',
-  },  {
-    path: 'pokok',
-    loadChildren: './pokok/pokok.module#PokokModule',
-  }, {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  } */
+  },{
+    path: 'example',
+    component: ExampleComponent,
+  }
   ],
 }];
 
