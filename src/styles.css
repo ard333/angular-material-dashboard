@@ -5,7 +5,7 @@
     color: #f0f0f0;
 }
 .secondary-color {
-    background-color: #7cc982;
+    background-color: #5fb466;
     color: #f0f0f0;
 }
 .tertiary-color {
@@ -13,15 +13,15 @@
     color: #f0f0f0;
 }
 .success-color {
-    background-color: #7cc982;
+    background-color: #5fb466;
     color: #f0f0f0;
 }
 .warning-color {
-    background-color: #d4db78;
+    background-color: #d6e04b;
     color: #f0f0f0;
 }
 .error-color {
-    background-color: #d86868;
+    background-color: #f75858;
     color: #f0f0f0;
 }
 .main-card {
@@ -60,4 +60,7 @@
 }
 .additional-info div span:nth-child(even){
     color: #666
+}
+.fill-remaining-space {
+    flex: auto 1 1;
 }

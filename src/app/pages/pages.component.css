@@ -17,10 +17,17 @@
     box-shadow: 0 0 0 0 !important;
     border-right: 1px solid #f0f0f0;
 }
+.main-sidenav mat-expansion-panel {
+    box-shadow: 0 0 0 0 !important;
+}
 .main-sidenav mat-expansion-panel mat-panel-title,
-.main-sidenav mat-expansion-panel mat-list-item {
+.main-sidenav mat-expansion-panel mat-list-item,
+.main-sidenav mat-list-item {
     color: #333;
     font-size: 13px;
+}
+.main-sidenav mat-expansion-panel mat-expansion-panel-header {
+    margin-top: 8px;
 }
 .main-sidenav a {
     text-decoration: none;
@@ -47,9 +54,6 @@ mat-list-item:hover, .menu-icon, .avatar {
     background-color: #f5f5f5;
 }
 
-.fill-remaining-space {
-    flex: auto 1 1;
-}
 .avatar {
     border-radius: 50%;
     height: 40px;
