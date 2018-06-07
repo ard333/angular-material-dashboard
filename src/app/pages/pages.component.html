@@ -19,9 +19,11 @@
 
   <mat-drawer #drawer mode="side" opened="true">
     <mat-list>
-      <mat-list-item class="single-level-menu">
-        <i class="material-icons sidenav-icon">dashboard</i>Dashboard
-      </mat-list-item>
+      <a routerLink="/pages/dashboard" routerLinkActive="sidenav-menu-active">
+        <mat-list-item class="single-level-menu">
+          <i class="material-icons sidenav-icon">dashboard</i>Dashboard
+        </mat-list-item>
+      </a>
     </mat-list>
     <mat-accordion>
       <mat-expansion-panel *ngFor="let menu of menus" style="box-shadow: 0 0 0 0 !important;">
