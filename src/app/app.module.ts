@@ -13,7 +13,6 @@ import { LoginModule } from './login/login.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     AppRoutingModule,
 
     LoginModule
