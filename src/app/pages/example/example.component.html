@@ -5,12 +5,12 @@
   <mat-divider></mat-divider>
   <mat-card-content>
 
-      <div class="table-container">
-          <div class="table-action">
-              <button mat-mini-fab color="success">
-                  <i class="material-icons">add</i>
-                </button>
-            </div>
+    <div class="table-container">
+      <div class="table-action">
+        <button mat-mini-fab color="success">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
       <div class="loading-shade" *ngIf="isLoadingResults">
         <div class="loading">
           <img src="assets/img/loading.gif" />
@@ -45,9 +45,9 @@
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef> Action </th>
           <td mat-cell *matCellDef="let element">
-              <button mat-mini-fab color="accent">
-                  <i class="material-icons">edit</i>
-                </button>
+            <button mat-mini-fab color="accent">
+              <i class="material-icons">edit</i>
+            </button>
             <button mat-mini-fab color="warning">
               <i class="material-icons">edit</i>
             </button>

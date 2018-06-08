@@ -237,7 +237,6 @@ $cdk-text-field-autofill-color-frame-count: 0;
       $cdk-text-field-autofill-color-frame-count + 1 !global;
 }
 
-
 // Core styles that can be used to apply material design treatments to any element.
 // Media queries
 // TODO(josephperrott): Change $mat-xsmall and $mat-small usages to rely on BreakpointObserver,
@@ -1217,15 +1216,12 @@ $mat-dark-theme-foreground: (
   slider-off-active: rgba(white, 0.3),
 );
 
-
-
 // For a given hue in a palette, return the contrast color from the map of contrast palettes.
 // @param $color-map
 // @param $hue
 @function mat-contrast($palette, $hue) {
   @return map-get(map-get($palette, contrast), $hue);
 }
-
 
 // Creates a map of hues to colors for a theme. This is used to define a theme palette in terms
 // of the Material Design hues.
@@ -1253,7 +1249,6 @@ $mat-dark-theme-foreground: (
   @return $result;
 }
 
-
 // Gets a color from a theme palette (the output of mat-palette).
 // The hue can be one of the standard values (500, A400, etc.), one of the three preconfigured
 // hues (default, lighter, darker), or any of the aforementioned prefixed with "-contrast".
@@ -1275,7 +1270,6 @@ $mat-dark-theme-foreground: (
   @return rgba($color, $opacity);
 }
 
-
 // Creates a container object for a light theme to be given to individual component theme mixins.
 @function mat-light-theme($primary, $accent, $success, $warning, $error) {
   @return (
@@ -1290,7 +1284,6 @@ $mat-dark-theme-foreground: (
   );
 }
 
-
 // Creates a container object for a dark theme to be given to individual component theme mixins.
 @function mat-dark-theme($primary, $accent, $success, $warning, $error) {
   @return (
@@ -1304,8 +1297,6 @@ $mat-dark-theme-foreground: (
     background: $mat-dark-theme-background,
   );
 }
-
-
 
 $mat-ripple-color-opacity: 0.1;
 
@@ -1344,8 +1335,6 @@ $mat-ripple-color-opacity: 0.1;
     background-color: rgba($foreground-base, $mat-ripple-color-opacity);
   }
 }
-
-
 
 // Utility for fetching a nested value from a typography config.
 @function _mat-get-type-value($config, $level, $name) {
@@ -1484,10 +1473,6 @@ $mat-ripple-color-opacity: 0.1;
   }
 }
 
-
-
-
-
 @mixin mat-optgroup-theme($theme) {
   $foreground: map-get($theme, foreground);
 
@@ -1505,8 +1490,6 @@ $mat-ripple-color-opacity: 0.1;
     @include mat-typography-level-to-styles($config, body-2);
   }
 }
-
-
 
 @mixin mat-pseudo-checkbox-theme($theme) {
   $is-dark-theme: map-get($theme, is-dark);
@@ -1727,8 +1710,6 @@ $mat-ripple-color-opacity: 0.1;
   }
 }
 
-
-
 @mixin mat-autocomplete-theme($theme) {
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
@@ -1758,11 +1739,6 @@ $mat-ripple-color-opacity: 0.1;
 // This contains all of the styles for the badge
 // rather than just the color/theme because of
 // no style sheet support for directives.
-
-
-
-
-
 $mat-badge-font-size: 12px;
 $mat-badge-font-weight: 600;
 $mat-badge-default-size: 22px !default;
@@ -1967,9 +1943,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
   }
 }
 
-
-
-
 @mixin mat-bottom-sheet-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -1988,9 +1961,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
     font-weight: mat-font-weight($config, subheading-2);
   }
 }
-
-
-
 
 // Applies a focus style to an mat-button element for each of the supported palettes.
 @mixin _mat-button-focus-overlay-color($theme) {
@@ -2139,10 +2109,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
   }
 }
 
-
-
-
-
 @mixin mat-button-toggle-theme($theme) {
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
@@ -2176,11 +2142,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
   }
 }
 
-
-
-
-
-
 @mixin mat-card-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -2213,10 +2174,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
     font-size: mat-font-size($config, body-1);
   }
 }
-
-
-
-
 
 @mixin mat-checkbox-theme($theme) {
   $is-dark-theme: map-get($theme, is-dark);
@@ -2326,10 +2283,6 @@ $mat-badge-large-size: $mat-badge-default-size + 6;
   }
 }
 
-
-
-
-
 // TODO(crisbeto): these values don't correspond to any of the typography breakpoints.
 $mat-chip-font-size: 13px;
 $mat-chip-line-height: 18px;
@@ -2407,10 +2360,6 @@ $mat-chip-remove-font-size: 18px;
   }
 }
 
-
-
-
-
 @mixin mat-table-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -2447,11 +2396,6 @@ $mat-chip-remove-font-size: 18px;
     font-size: mat-font-size($config, body-1);
   }
 }
-
-
-
-
-
 
 $mat-datepicker-selected-today-box-shadow-width: 1px;
 $mat-datepicker-selected-fade-amount: 0.6;
@@ -2592,11 +2536,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
-
 @mixin mat-dialog-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -2612,10 +2551,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     @include mat-typography-level-to-styles($config, title);
   }
 }
-
-
-
-
 
 @mixin mat-expansion-panel-theme($theme) {
   $background: map-get($theme, background);
@@ -2673,9 +2608,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
 // This mixin will ensure that lines that overflow the container will hide the overflow and
 // truncate neatly with an ellipsis.
 @mixin mat-truncate-line() {
@@ -2726,8 +2658,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
 // Include this empty mixin for consistency with the other components.
 @mixin mat-grid-list-theme($theme) { }
 
@@ -2738,9 +2668,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     font-size: mat-font-size($config, body-1);
   }
 }
-
-
-
 
 // Include this empty mixin for consistency with the other components.
 @mixin mat-icon-theme($theme) {
@@ -2776,10 +2703,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
 }
 
 @mixin mat-icon-typography($config) { }
-
-
-
-
 
 // Renders a gradient for showing the dashed line when the input is disabled.
 // Unlike using a border, a gradient allows us to adjust the spacing of the dotted line
@@ -2840,10 +2763,8 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   -webkit-backface-visibility: $value;
   backface-visibility: $value;
 }
+
 /* stylelint-enable */
-
-
-
 @mixin mat-input-theme($theme) {
   $primary: map-get($theme, primary);
   $success: map-get($theme, success);
@@ -2897,12 +2818,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     margin-top: -$line-spacing * 1em;
   }
 }
-
-
-
-
-
-
 
 @mixin mat-list-theme($theme) {
   $background: map-get($theme, background);
@@ -2984,11 +2899,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
-
 @mixin mat-menu-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -3033,11 +2943,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
-
 @mixin mat-paginator-theme($theme) {
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
@@ -3081,10 +2986,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     }
   }
 }
-
-
-
-
 
 @mixin mat-progress-bar-theme($theme) {
   $primary: map-get($theme, primary);
@@ -3167,11 +3068,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
 
 @mixin mat-progress-bar-typography($config) { }
 
-
-
-
-
-
 @mixin mat-progress-spinner-theme($theme) {
   $primary: map-get($theme, primary);
   $success: map-get($theme, success);
@@ -3203,10 +3099,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
 }
 
 @mixin mat-progress-spinner-typography($config) { }
-
-
-
-
 
 @mixin _mat-radio-color($palette) {
   &.mat-radio-checked .mat-radio-outer-circle {
@@ -3275,12 +3167,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     font-family: mat-font-family($config);
   }
 }
-
-
-
-
-
-
 
 @mixin mat-select-theme($theme) {
   $foreground: map-get($theme, foreground);
@@ -3363,10 +3249,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
 @mixin mat-sidenav-theme($theme) {
   $primary: map-get($theme, primary);
   $success: map-get($theme, success);
@@ -3404,10 +3286,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
 }
 
 @mixin mat-sidenav-typography($config) { }
-
-
-
-
 
 @mixin _mat-slide-toggle-checked($palette, $thumb-checked-hue) {
   // Do not apply the checked colors if the toggle is disabled, because the
@@ -3487,7 +3365,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     }
 
   }
-
   .mat-disabled {
     .mat-slide-toggle-thumb {
       // The thumb of the slide-toggle always uses the hue 400 of the grey palette in dark
@@ -3514,10 +3391,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
     @include mat-typography-level-to-styles($config, body-1);
   }
 }
-
-
-
-
 
 @mixin _mat-slider-inner-content-theme($palette) {
   .mat-slider-track-fill,
@@ -3666,10 +3539,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
 @mixin mat-stepper-theme($theme) {
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
@@ -3740,10 +3609,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
 @mixin mat-sort-theme($theme) { }
 
 @mixin mat-sort-typography($config) { }
-
-
-
-
 
 @mixin mat-tabs-theme($theme) {
   $primary: map-get($theme, primary);
@@ -3881,11 +3746,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
-
 @mixin _mat-toolbar-color($palette) {
   background: mat-color($palette);
   color: mat-color($palette, default-contrast);
@@ -3956,10 +3816,6 @@ $mat-calendar-weekday-table-font-size: 11px !default;
   }
 }
 
-
-
-
-
 $mat-tooltip-target-height: 22px;
 $mat-tooltip-font-size: 10px;
 $mat-tooltip-vertical-padding: ($mat-tooltip-target-height - $mat-tooltip-font-size) / 2;
@@ -3989,9 +3845,6 @@ $mat-tooltip-handset-vertical-padding:
     padding-bottom: $mat-tooltip-handset-vertical-padding;
   }
 }
-
-
-
 
 @mixin mat-snack-bar-theme($theme) {
   $is-dark-theme: map-get($theme, is-dark);
@@ -4025,20 +3878,7 @@ $mat-tooltip-handset-vertical-padding:
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Theme styles that only apply to the fill appearance of the form-field.
-
 @mixin mat-form-field-fill-theme($theme) {
   $foreground: map-get($theme, foreground);
   $is-dark-theme: map-get($theme, is-dark);
@@ -4132,14 +3972,7 @@ $mat-form-field-fill-dedupe: 0;
   }
 }
 
-
-
-
-
-
-
 // Theme styles that only apply to the legacy appearance of the form-field.
-
 @mixin mat-form-field-legacy-theme($theme) {
   $foreground: map-get($theme, foreground);
   $is-dark-theme: map-get($theme, is-dark);
@@ -4265,12 +4098,6 @@ $mat-form-field-legacy-dedupe: 0;
     }
   }
 }
-
-
-
-
-
-
 
 // Theme styles that only apply to the outline appearance of the form-field.
 
@@ -4412,13 +4239,7 @@ $mat-form-field-outline-dedupe: 0;
 }
 
 
-
-
-
-
-
 // Theme styles that only apply to the standard appearance of the form-field.
-
 @mixin mat-form-field-standard-theme($theme) {
   $foreground: map-get($theme, foreground);
   $is-dark-theme: map-get($theme, is-dark);
@@ -4437,8 +4258,6 @@ $mat-form-field-outline-dedupe: 0;
 }
 
 @mixin mat-form-field-standard-typography($config) {}
-
-
 
 // Theme styles that apply to all appearances of the form-field.
 
@@ -4668,10 +4487,6 @@ $mat-form-field-dedupe: 0;
   @include mat-form-field-outline-typography($config);
 }
 
-
-
-
-
 @mixin mat-tree-theme($theme) {
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
@@ -4695,8 +4510,6 @@ $mat-form-field-dedupe: 0;
     font-size: mat-font-size($config, body-1);
   }
 }
-
-
 
 // Includes all of the typographic styles.
 @mixin angular-material-typography($config: null) {
@@ -4787,21 +4600,6 @@ $mat-form-field-dedupe: 0;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @mixin mat-divider-theme($theme) {
   $foreground: map-get($theme, foreground);
 
@@ -4813,30 +4611,6 @@ $mat-form-field-dedupe: 0;
     border-right-color: mat-color($foreground, divider);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Create a theme.
 @mixin angular-material-theme($theme) {

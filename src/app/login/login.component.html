@@ -1,12 +1,14 @@
-<div>
+<div fxLayoutAlign="center center">
+
   <mat-card class="login-container">
-    <img src="assets/img/logo.png" class="logo"/>
-    <mat-form-field>
+    <img fxLayout="row" src="assets/img/logo.png" class="login-logo"/>
+    <mat-form-field fxLayout="row">
       <input matInput placeholder="Username">
     </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Passwrd">
+    <mat-form-field fxLayout="row">
+      <input matInput placeholder="Password">
     </mat-form-field>
-    <button mat-raised-button>Login</button>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
   </mat-card>
+
 </div>

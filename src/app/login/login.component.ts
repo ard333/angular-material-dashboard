@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatFormFieldControl } from '@angular/material/form-field';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,13 @@ import { MatFormFieldControl } from '@angular/material/form-field';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  login() {
+    this.router.navigate(['/pages/dashboard']);
   }
 
 }

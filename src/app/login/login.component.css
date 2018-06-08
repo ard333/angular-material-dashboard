@@ -1,9 +1,8 @@
 .login-container {
     text-align: center;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
 }
-.login-container .logo{
-    display: block;
+.login-logo {
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
