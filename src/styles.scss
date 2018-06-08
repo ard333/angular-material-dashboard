@@ -1,29 +1,15 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-.primary-color {
-    background-color: #333;
-    color: #f0f0f0;
-}
-.secondary-color {
-    background-color: #5fb466;
-    color: #f0f0f0;
-}
-.tertiary-color {
-    background-color: #666;
-    color: #f0f0f0;
-}
-.success-color {
-    background-color: #5fb466;
-    color: #f0f0f0;
-}
-.warning-color {
-    background-color: #d6e04b;
-    color: #f0f0f0;
-}
-.error-color {
-    background-color: #f75858;
-    color: #f0f0f0;
-}
+@import '_theming.scss';
+@include mat-core();
+$my-app-primary: mat-palette($mat-gray, 900);
+$my-app-accent: mat-palette($mat-gray, 700);
+$my-app-success: mat-palette($mat-teal, 500);
+$my-app-warning: mat-palette($mat-yellow, 600);
+$my-app-error: mat-palette($mat-red, 600);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-success, $my-app-warning, $my-app-error);
+@include angular-material-theme($my-app-theme);
+
 .main-card {
     margin: 15px 15px 15px 15px;
     height: 100%;
@@ -64,3 +50,4 @@
 .fill-remaining-space {
     flex: auto 1 1;
 }
+

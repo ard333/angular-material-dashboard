@@ -6,6 +6,10 @@ mat-card-content table{
     overflow: auto;
     padding: 10px;
 }
+.table-container button{
+    box-shadow: 0 0 0 0 !important;
+    margin-right: 5px;
+}
 .table-action{
     text-align: right;
 }
@@ -22,18 +26,4 @@ mat-card-content table{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.edit-button, .delete-button, .add-button {
-    box-shadow: 0 0 0 0 !important;
-    color: #f0f0f0;
-}
-.add-button {
-    background-color: #5fb466;
-}
-.edit-button {
-    background-color: #d6e04b;
-}
-.delete-button {
-    background-color: #f75858;
 }
