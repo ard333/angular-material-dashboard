@@ -1,0 +1,31 @@
+{
+	"name": "Angular Material Dashboard",
+	"short_name": "Angular Dash",
+	"description": "Simple Dashboard using Angular, Angular Material and Chart.js",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#333",
+	"icons": [
+		{
+			"src": "assets/img/icon/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/img/icon/icon-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/img/icon/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/img/icon/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
