@@ -2,6 +2,7 @@
 	"name": "Angular Material Dashboard",
 	"short_name": "Angular Dash",
 	"description": "Simple Dashboard using Angular, Angular Material and Chart.js",
+	"scope": "/",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#ffffff",
