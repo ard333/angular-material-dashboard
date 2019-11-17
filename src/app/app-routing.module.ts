@@ -5,16 +5,9 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'pages', redirectTo: 'pages/dashboard' },
-  {
-    path: 'pages',
-    loadChildren: './pages/pages.module#PagesModule',
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  { path: '**', redirectTo: '' },
-  
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 const config: ExtraOptions = {

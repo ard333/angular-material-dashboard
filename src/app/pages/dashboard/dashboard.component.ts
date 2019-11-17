@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import * as Chart from 'chart.js'
+/* import * as Chart from 'chart.js' */
 
 @Component({
   selector: 'app-dashboard',
@@ -8,16 +8,16 @@ import * as Chart from 'chart.js'
 })
 export class DashboardComponent implements AfterViewInit {
 
-  @ViewChild('barChart') barChart: ElementRef;
+  /* @ViewChild('barChart') barChart: ElementRef;
   public contextBar: CanvasRenderingContext2D;
 
   @ViewChild('pieChart') pieChart: ElementRef;
-  public contextPie: CanvasRenderingContext2D;
+  public contextPie: CanvasRenderingContext2D; */
 
   constructor() { }
 
   ngAfterViewInit() {
-    this.contextBar = (<HTMLCanvasElement>this.barChart.nativeElement).getContext('2d');
+    /* this.contextBar = (<HTMLCanvasElement>this.barChart.nativeElement).getContext('2d');
     new Chart(this.contextBar, {
       type: 'line',
       data: {
@@ -53,7 +53,7 @@ export class DashboardComponent implements AfterViewInit {
           'Label Three'
         ]
       }
-    })
+    }) */
   }
 
 }

@@ -2,6 +2,9 @@
     margin-top: 30px;
     text-align: center;
     min-width: 250px;
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .login-container mat-form-field {
     display: block;

@@ -1,10 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
-import { DashboardModule } from "./dashboard/dashboard.module";
-import { ExampleModule } from "./example/example.module";
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -15,12 +12,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    
-    DashboardModule,
-    ExampleModule,
 
     MatToolbarModule,
     MatSidenavModule,
@@ -31,7 +26,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatMenuModule,
   ],
   declarations: [
-    PagesComponent,
+    PagesComponent
   ]
 })
 export class PagesModule { }

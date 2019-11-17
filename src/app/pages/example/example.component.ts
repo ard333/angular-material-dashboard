@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
-import { MatButtonModule } from '@angular/material/button';
 
 export interface PeriodicElement {
   name: string;
@@ -19,12 +18,12 @@ export class ExampleComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight', 'symbol', 'action'];
   dataSource = new MatTableDataSource<PeriodicElement>([]);
 
-  isLoadingResults;
-  resultsLength;
-  currentPage;
+  isLoadingResults: boolean;
+  resultsLength: number;
+  currentPage: number;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
   handlePage(e: any) {
     this.currentPage = e.pageIndex;
     this.getPage(this.currentPage);
@@ -32,7 +31,7 @@ export class ExampleComponent implements OnInit {
 
   getPage(page: number) {
     this.isLoadingResults = true;
-    //simulation
+    // simulation
     this.delay(1000).then(() => {
       this.dataSource = new MatTableDataSource<PeriodicElement>(this.getData(this.currentPage));
       this.isLoadingResults = false;
@@ -46,9 +45,9 @@ export class ExampleComponent implements OnInit {
     this.getPage(this.currentPage);
   }
 
-  //just shuffle
+  // just shuffle
   getData(page: number): Array<PeriodicElement> {
-    var dataSource = [
+    const dataSource = [
       { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
       { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
       { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -60,7 +59,9 @@ export class ExampleComponent implements OnInit {
       { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
       { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
-    var currentIndex = dataSource.length, temporaryValue, randomIndex;
+    let currentIndex = dataSource.length;
+    let temporaryValue: any;
+    let randomIndex: number;
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;

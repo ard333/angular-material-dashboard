@@ -1,4 +1,4 @@
-<mat-toolbar class="main-toolbar mat-elevation-z3">
+<mat-toolbar class="main-toolbar">
   <button mat-icon-button (click)="drawer.toggle()">
     <i class="material-icons">menu</i>
   </button>
@@ -7,7 +7,7 @@
 
   <span class="fill-remaining-space"></span>
 
-  <img src="assets/img/profile.jpeg" class="avatar" [matMenuTriggerFor]="menu" />
+  <i class="material-icons" style="cursor: pointer;" [matMenuTriggerFor]="menu">person</i>
   <i class="material-icons menu-icon" [matMenuTriggerFor]="menu">more_vert</i>
   <mat-menu #menu="matMenu" [overlapTrigger]="false">
     <button mat-menu-item class="profile-menu">Edit Profile</button>
@@ -47,7 +47,7 @@
 
   </mat-drawer>
 
-  <div>
+  <div class="main-panel">
     <router-outlet></router-outlet>
   </div>
 
