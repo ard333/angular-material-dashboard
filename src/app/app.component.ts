@@ -1,13 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: []
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-  public title = 'app';
+export class AppComponent {
+  title = 'angular-material-dashboard';
 
   public loading;
 

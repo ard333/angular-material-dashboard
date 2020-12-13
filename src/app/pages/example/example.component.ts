@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -18,11 +19,11 @@ export class ExampleComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight', 'symbol', 'action'];
   dataSource = new MatTableDataSource<PeriodicElement>([]);
 
-  isLoadingResults: boolean;
-  resultsLength: number;
-  currentPage: number;
+  isLoadingResults: boolean = true;
+  resultsLength: number = 0;
+  currentPage: number = 1;
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: true}) paginator!: MatPaginator;
 
   handlePage(e: any) {
     this.currentPage = e.pageIndex;
