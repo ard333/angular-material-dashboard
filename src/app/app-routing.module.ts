@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: 'pages', redirectTo: 'pages/dashboard' },
   { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({

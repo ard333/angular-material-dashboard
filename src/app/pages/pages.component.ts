@@ -26,19 +26,13 @@ export class PagesComponent implements OnInit {
       ]
     },
     {
-      title: 'Dashboard',
-      icon: 'dashboard',
-      path: '/pages/dashboard',
-      menuItem: []
-    },
-    {
-      title: 'Multi Level Menu',
+      title: 'Multi Level Menu 2',
       icon: 'wrap_text',
       menuItem: [
         {
-          title: 'Some Example',
+          title: 'Some Example 2',
           icon: 'build',
-          path: '/pages/example',
+          path: '/pages/example-2',
         }
       ]
     },

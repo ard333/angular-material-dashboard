@@ -7,7 +7,8 @@ const routes: Routes = [{
   path: '', component: PagesComponent,
   children: [
     { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
-    { path: 'example', loadChildren: () => import('./example/example.module').then(m => m.ExampleModule) }
+    { path: 'example', loadChildren: () => import('./example/example.module').then(m => m.ExampleModule) },
+    { path: 'example-2', loadChildren: () => import('./example/example.module').then(m => m.ExampleModule) }
   ],
 }];
 

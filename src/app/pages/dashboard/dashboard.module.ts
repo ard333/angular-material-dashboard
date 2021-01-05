@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 
     MatCardModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxChartsModule
   ],
   declarations: [
     DashboardComponent

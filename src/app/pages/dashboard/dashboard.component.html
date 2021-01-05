@@ -1,1 +1,31 @@
-<div>Dashboard</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Dashboard</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+
+    <div class="chart-container">
+      <ngx-charts-pie-grid
+        [scheme]="colorPieGrid"
+        [results]="dataPieGrid">
+      </ngx-charts-pie-grid>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="chart-container">
+      <ngx-charts-line-chart
+        [scheme]="colorLine"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [xAxisLabel]="'Year'"
+        [yAxisLabel]="'Population'"
+        [timeline]="true"
+        [results]="dataLine">
+      </ngx-charts-line-chart>
+    </div>
+
+  </mat-card-content>
+</mat-card>
