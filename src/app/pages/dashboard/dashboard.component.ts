@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Color, ScaleType } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,8 +13,12 @@ export class DashboardComponent {
     { "name": "USA", "value": 5000000 },
     { "name": "France", "value": 7200000 }
   ];
-  sizePieGrid: any[] = [500, 400];
-  colorPieGrid = { domain: ['#5AA454', '#E44D25', '#CFC0BB'] };
+  colorPieGrid: Color = {
+    name: 'colorPieGrid',
+    selectable: true,
+    group: ScaleType.Linear,
+    domain: ['#5AA454', '#E44D25', '#CFC0BB']
+  };
 
   dataLine: any[] = [
     {
@@ -49,10 +54,13 @@ export class DashboardComponent {
       ]
     }
   ];
-  colorLine = {
+  colorLine: Color = {
+    name: 'colorPieGrid',
+    selectable: true,
+    group: ScaleType.Linear,
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor() { }
+  constructor() {}
 
 }

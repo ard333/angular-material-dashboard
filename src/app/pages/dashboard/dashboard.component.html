@@ -6,14 +6,14 @@
   <mat-card-content>
 
     <div class="chart-container">
-      <ngx-charts-pie-grid
+      <ngx-charts-pie-grid style="height: 250px;"
         [scheme]="colorPieGrid"
         [results]="dataPieGrid">
       </ngx-charts-pie-grid>
     </div>
     <mat-divider></mat-divider>
     <div class="chart-container">
-      <ngx-charts-line-chart
+      <ngx-charts-line-chart style="height: 400px;"
         [scheme]="colorLine"
         [legend]="true"
         [showXAxisLabel]="true"
