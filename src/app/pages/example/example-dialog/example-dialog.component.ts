@@ -27,13 +27,19 @@ export class ExampleDialogComponent implements OnInit {
     })
 
     if (this.editData) {
-      this.periodicForm.controls['position'].setValue(this.editData.position);
-      this.periodicForm.controls['name'].setValue(this.editData.name);
-      this.periodicForm.controls['weight'].setValue(this.editData.weight);
-      this.periodicForm.controls['symbol'].setValue(this.editData.symbol);
-      this.periodicForm.controls['description'].setValue(this.editData.description);
+      this.loadEditData();
     }
     
+  }
+
+  loadEditData(): void {
+    this.periodicForm.setValue({
+      'position': this.editData.position,
+      'name': this.editData.name,
+      'weight': this.editData.weight,
+      'symbol': this.editData.symbol,
+      'description': this.editData.description
+    })
   }
 
   addPeriodic(): void {
