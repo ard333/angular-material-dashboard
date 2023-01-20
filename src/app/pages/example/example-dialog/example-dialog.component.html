@@ -3,19 +3,19 @@
   <form [formGroup]="periodicForm">
     <mat-form-field appearance="fill">
       <mat-label>Position</mat-label>
-      <input matInput placeholder="1" required formControlName="position">
+      <input matInput placeholder="1" formControlName="position">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="hidrogen" required formControlName="name">
+      <input matInput placeholder="hidrogen" formControlName="name">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Weight</mat-label>
-      <input mdInput type="number" matInput placeholder="9.122821" required formControlName="weight">
+      <input mdInput type="number" matInput placeholder="9.122821" formControlName="weight">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Symbol</mat-label>
-      <input matInput placeholder="H" required formControlName="symbol">
+      <input matInput placeholder="H" formControlName="symbol">
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Description</mat-label>
@@ -25,5 +25,5 @@
 </div>
 <div mat-dialog-action [align]="'end'">
   <button mat-raised-button mat-dialog-close>Close</button>
-  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addPeriodic()">Save</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary" [disabled]="periodicForm.invalid" (click)="addPeriodic()">Save</button>
 </div>

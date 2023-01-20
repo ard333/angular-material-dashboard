@@ -43,10 +43,7 @@ export class ExampleDialogComponent implements OnInit {
   }
 
   addPeriodic(): void {
-    if (this.periodicForm.valid) {
-      this.periodicForm.reset();
-      this.dialogRef.close();
-    }
+    this.dialogRef.close();
   }
 
 
