@@ -1,12 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from "@angular/material/dialog";
+import { ExampleDialogComponent } from './example-dialog/example-dialog.component';
 
 export interface PeriodicElement {
   name: string;
   position: number;
   weight: number;
   symbol: string;
+  description: string;
 }
 
 @Component({
@@ -16,8 +19,12 @@ export interface PeriodicElement {
 })
 export class ExampleComponent implements OnInit {
 
-  displayedColumns = ['position', 'name', 'weight', 'symbol', 'action'];
+  displayedColumns = ['position', 'name', 'weight', 'symbol', 'description', 'action'];
   dataSource = new MatTableDataSource<PeriodicElement>([]);
+  
+  constructor (
+    private dialog: MatDialog
+  ) {}
 
   isLoadingResults: boolean = true;
   resultsLength: number = 0;
@@ -49,16 +56,16 @@ export class ExampleComponent implements OnInit {
   // just shuffle
   getData(page: number): Array<PeriodicElement> {
     const dataSource = [
-      { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-      { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-      { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-      { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-      { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-      { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-      { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-      { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-      { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-      { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+      { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 5, name: 'Boron', weight: 10.811, symbol: 'B', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+      { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
     ];
     let currentIndex = dataSource.length;
     let temporaryValue: any;
@@ -75,6 +82,19 @@ export class ExampleComponent implements OnInit {
 
   delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+  addPeriodic() {
+    this.dialog.open(ExampleDialogComponent, {
+      width: "40%"
+    });
+  }
+
+  editPeriodic(element : any) {
+    this.dialog.open(ExampleDialogComponent, {
+      width: "40%",
+      data: element
+    });
   }
 
 }
