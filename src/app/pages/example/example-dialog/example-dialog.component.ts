@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-example-dialog',
@@ -15,6 +15,7 @@ export class ExampleDialogComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder, 
     private dialogRef: MatDialogRef<ExampleDialogComponent>,
+    private snackBar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) public editData : any ){}
 
   ngOnInit(): void {
@@ -43,6 +44,11 @@ export class ExampleDialogComponent implements OnInit {
   }
 
   addPeriodic(): void {
+    this.snackBar.open("Success!!!", "Dismiss", {
+      duration: 2000,
+      verticalPosition: "top",
+      horizontalPosition: "center" 
+    });
     this.dialogRef.close();
   }
 
