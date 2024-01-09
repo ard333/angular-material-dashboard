@@ -14,6 +14,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   declarations: [
     ExampleComponent,
